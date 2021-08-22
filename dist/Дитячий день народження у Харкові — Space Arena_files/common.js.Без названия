@@ -1,0 +1,199 @@
+(function($) {
+// 	function toggleDropdown (e) {
+// 		e.preventDefault();
+// 	  	var _d = $(e.target).closest('.dropdown'),
+// 		  	_m = $('.dropdown-menu', _d);
+// 	  	setTimeout(function(){
+// 			var shouldOpen = e.type !== 'click' && _d.is(':hover');
+// 			_m.toggleClass('show', shouldOpen);
+// 			_d.toggleClass('show', shouldOpen);
+// 			$('[data-toggle="dropdown"]', _d).attr('aria-expanded', shouldOpen);
+// 	  }, e.type === 'mouseleave' ? 300 : 0);
+// 	}
+// 	$('body')
+// 	  .on('mouseenter mouseleave','.dropdown',toggleDropdown)
+// 	  .on('click', '#navbar .dropdown-toggle', toggleDropdown);
+    "use strict"; // Start of use strict
+
+    // Highlight the top nav as scrolling occurs
+    $('body').scrollspy({
+        target: '#navigation',
+        offset: 54
+    });
+
+    // Closes the Responsive Menu on Menu Item Click
+    $('.navbar-collapse>ul>li>a').click(function() {
+        $('.navbar-collapse').collapse('hide');
+    });
+
+    // jQuery to collapse the navbar on scroll
+    $(window).scroll(function() {
+        if ($("#navigation").offset().top > 100) {
+            $("#navigation").addClass("navbar-shrink");
+        } else {
+            $("#navigation").removeClass("navbar-shrink");
+        }
+    });
+
+})(jQuery); // End of use strict
+
+jQuery('.owl-gallery').owlCarousel({
+    stagePadding: 200,
+    loop:true,
+    mouseDrag:false,
+    touchDrag:true,
+    navText: ["<span class='icomoon icomoon-left-arrow-darkicomoon'></span>", "<span class='icomoon icomoon-right-arrow-darkicomoon'></span>"],
+    margin:0,
+    nav:true,
+    items:1,
+    lazyLoad: true,
+    responsive:{
+        0:{
+            items:1,
+            stagePadding: 0
+        },
+        576:{
+            items:1,
+            stagePadding: 100
+        },
+        1000:{
+            items:1,
+            stagePadding: 200
+        },
+        1200:{
+            items:1,
+            stagePadding: 250
+        },
+        1400:{
+            items:1,
+            stagePadding: 300
+        },
+        1600:{
+            items:1,
+            stagePadding: 350
+        },
+        1800:{
+            items:1,
+            stagePadding: 400
+        }
+    }
+});
+
+jQuery('.owl-logos').owlCarousel({
+    loop:true,
+    margin: 75,
+    dots: false,
+    mouseDrag:false,
+    touchDrag:true,
+    navText: ["<span class='icomoon icomoon-left-arrow-darkicomoon'></span>", "<span class='icomoon icomoon-right-arrow-darkicomoon'></span>"],
+    nav:true,
+    lazyLoad: true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:2
+        },
+        992:{
+            items:3,
+            stagePadding: 20
+        },
+        1200:{
+            items:4,
+            stagePadding: 40
+        }
+    }
+});
+
+jQuery('.owl-sales').owlCarousel({
+    loop:true,
+    margin: 35,
+    dots: false,
+    mouseDrag:false,
+    touchDrag:true,
+    navText: ["<span class='icomoon icomoon-left-arrow-darkicomoon'></span>", "<span class='icomoon icomoon-right-arrow-darkicomoon'></span>"],
+    nav:true,
+    lazyLoad: true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:1
+        },
+        1000:{
+            items:2,
+            stagePadding: 17
+        },
+        1200:{
+            items:2,
+            stagePadding: 17
+        }
+    }
+});
+
+
+function tablesCarousel(e) {
+    var checkWidth = jQuery(window).width();
+    var owlPost = jQuery(".tab-content .tab-pane .tables-holder");
+    if (checkWidth > 767) {
+        if(typeof owlPost.data('owl-tables owl-carousel') != 'undefined'){
+            owlPost.data('owl-tables owl-carousel').destroy(); 
+        }
+        owlPost.trigger('destroy.owl.carousel');
+        owlPost.removeClass('owl-tables owl-carousel');
+    } else if (checkWidth < 767) {
+        owlPost.addClass('owl-tables owl-carousel');
+        owlPost.owlCarousel({
+            loop:true,
+            mouseDrag:false,
+            touchDrag:true,
+            dots: false,
+            margin:0,
+            navText: ["<span class='icomoon icomoon-left-arrow-darkicomoon'></span>", "<span class='icomoon icomoon-right-arrow-darkicomoon'></span>"],
+            nav:true,
+            lazyLoad: true,
+            responsive:{
+                0:{
+                    items:1
+                },
+                767:{
+                    items:1
+                }
+            }
+        });
+    }
+}
+
+tablesCarousel();
+jQuery(window).resize(tablesCarousel);
+
+jQuery('#navbar a').smoothScroll({
+    easing: 'swing',
+    speed: 800,
+});
+
+jQuery('.scroll-down-holder a').smoothScroll({
+    easing: 'swing',
+    speed: 800,
+});
+
+jQuery(document).ready(function($) {
+
+    document.addEventListener( 'wpcf7mailsent', function( event ) {
+        if ( '17' == event.detail.contactFormId ) {
+            ga('send', 'event', 'button', 'click', 'order-button-spacearena');
+        }
+        if ( '172' == event.detail.contactFormId ) {
+            ga('send', 'event', 'button', 'click', 'order-button-spacearena');
+		}
+        if ( '304' == event.detail.contactFormId ) {
+            ga('send', 'event', 'button', 'click', 'order-button-spacearena');
+        }
+		if ( '174' == event.detail.contactFormId ) {
+            ga('send', 'event', 'button', 'click', 'subscribe-button-spacearena');
+        }
+    }, false );
+    
+});

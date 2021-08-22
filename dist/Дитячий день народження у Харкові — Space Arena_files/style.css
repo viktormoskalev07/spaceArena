@@ -1,0 +1,311 @@
+/*!
+Theme Name: Space Arena
+Theme URI:
+Author: 
+Author URI: 
+Description: Description
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: space
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+
+/*
+ * Fixed Block
+*/
+
+.fix-bar-holder {
+    position: fixed;
+    top: 40%;
+    z-index: 99;
+}
+.vertical-social li {
+    font-size: 28px;
+}
+#call-widget-form {
+    position:fixed;
+    left: -480px;
+    margin-top: -53px;
+    transition: left .4s ease-out;
+    max-width: 480px;
+    width: 100%;
+    height: 200px;
+    background: #202020;
+    color: #fff;
+    padding: 15px;
+}
+.inline-form {
+    display: flex;
+    margin-bottom: 10px;
+}
+.inline-form input[type="text"],
+.inline-form input[type="email"],
+.inline-form input[type="tel"] {
+    border-radius: 2px 0 0 2px;
+}
+.inline-form .btn-subm {
+    border-radius: 0 2px 2px 0;
+    height: 50px;
+    width: 100%;
+    max-width: 160px;
+    background: #0090ff;
+    text-align: center;
+    font-family: "Play", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 25px!important;
+    padding-right: 25px !important;
+    text-transform: none;
+}
+#call-widget-form div.wpcf7 .ajax-loader {
+    display: none;
+}
+div#call-widget-form.open {
+    left: 50px;
+}
+/*#social-vertical-list .vertical-social {
+    list-style: none;
+    padding-left: 5px;
+    font-size: 28px;
+    left: -67px;
+    position: relative;
+}*/
+#social-vertical-list .vertical-social {
+    list-style: none;
+    padding-left: 5px;
+    font-size: 28px;
+    left: -79px;
+    position: relative;
+}
+#social-vertical-list .vertical-social li a {
+    line-height: 46.2px;
+    color: #0090ff;
+}
+
+
+/*#call-widget {
+    left: -67px;
+    top: 60px;
+    transform: rotate(-90deg);
+    background: #efa500;
+    padding: 10px 30px;
+    color: #fff;
+    cursor: pointer;
+    position:relative;
+}*/
+/*.btn-call-toogle,
+.call-toggle {
+    color: #fff;
+    font-size: 14px;
+}*/
+#call-widget {
+    left: -72px;
+    top: 70px;
+    transform: rotate(-90deg);
+    background: #0090ff;
+    padding: 10px 30px;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+}
+.btn-call-toogle, .call-toggle {
+    color: #fff;
+    font-size: 16px;
+    font-family: "Play", Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+#call-widget:hover {
+    background-color: #007ad9;
+    transition: background-color .4s;
+}
+#call-widget .call-form-numbers {
+    height: 0px;
+    opacity: 0;
+}
+
+#call-widget .call-form {
+    padding: 10px;
+    background-color: #272727;
+    cursor: pointer;
+    text-align: right;
+    display: none;
+    position: relative;
+}
+
+#call-widget .call-form a {
+    line-height: 20px;
+    margin: 0;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+#call-widget .call-form-numbers.open .call-form {
+    display: block;
+}
+
+#call-widget-form p {
+    line-height: 22px;
+}
+.inline-form input[type="text"],
+.inline-form input[type="email"],
+.inline-form input[type="tel"] {
+	width: 100%;
+	height: 50px;
+    background: transparent;
+    border: 2px solid #0090ff;
+    text-align: center;
+    color: #fff;
+    font-family: "Play",Arial,Helvetica,sans-serif;
+}
+
+.call-widget-mobile {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    font-size: 32px;
+    left: 20px;
+    z-index: 999;
+    box-shadow: 0 0 0 0 rgba(0, 144, 255, 1);
+    padding: 10px 20px 2px;
+    border-radius: 50%;
+    color: #fff;
+    background: #0090ff;
+    max-width: 65px;
+    max-height: 65px;
+    height: 100%;
+    width: 100%;
+    animation: pulse 1.25s infinite cubic-bezier(0.66,0,0,1);
+}
+.call-widget-mobile a {
+    color: #fff;
+    line-height: 50px;
+    text-decoration: none;
+}
+.call-widget-button {
+    -webkit-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    -moz-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    -ms-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+}
+button.mfp-close {
+    overflow: visible;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    -webkit-appearance: none;
+    display: block;
+    outline: none;
+    padding: 0;
+    z-index: 1046;
+    box-shadow: none;
+    touch-action: manipulation;
+}
+.mfp-close {
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-decoration: none;
+    text-align: center;
+    opacity: 0.65;
+    padding: 0 0 18px 10px;
+    color: #FFF;
+    font-style: normal;
+    font-size: 28px;
+    font-family: Arial, Baskerville, monospace;
+}
+.inline-form .btn-subm:hover {
+    background-color: #007ad9;
+}
+#navigation .navbar-nav .dropdown .dropdown-toggle {
+    color: #fff;
+    transition: color .3s ease;
+}
+#navigation .navbar-nav .dropdown a {
+    transition: color .3s ease;
+}
+.btn-order {
+	max-width: 230px;
+}
+@media only screen and (min-width: 1201px) {
+	#navigation .navbar-nav .dropdown:hover>.dropdown-menu {
+		display: block;
+    }
+    #navigation .navbar-nav .dropdown:hover> .dropdown-toggle,
+    #navigation .navbar-nav .dropdown:hover> a {
+        color: #007ad9 !important;
+    }
+    #navigation .navbar-nav .dropdown {
+        justify-content: center;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .navbar-dark {
+        background: #00050e;
+    }
+    #navigation .navbar-nav .dropdown .dropdown-toggle {
+        padding-left: 1rem;
+        width: 70%;
+    }
+    .phones-dropdown {
+		text-align: left;
+    }
+}
+.dropdown-menu,
+.dropdown-item:focus,
+.dropdown-item:hover{
+	background-color: #00050e;
+}
+.navbar-shrink-dark {
+	background: #00050e!important;
+}
+article.post img,
+article.page img {
+	max-width: 100%;
+	height: auto;
+	margin-bottom: 1rem;
+}
+@media only screen and (max-width: 576px) {
+	#social-vertical-list,
+    #call-widget {
+        display: none;
+    }
+    .call-widget-mobile {
+        display: block;
+    }
+    .inline-form {
+        display: flex;
+        flex-direction: column;
+    }
+    .inline-form input[type="text"],
+    .inline-form input[type="email"],
+    .inline-form input[type="tel"] {
+        border-radius: 2px;
+        margin-bottom: 30px!important;
+    }
+    .inline-form .btn-subm {
+        border-radius: 2px;
+        height: 50px;
+        width: 100%;
+        max-width: 390px;
+    }
+    #navigation .navbar-nav .dropdown .dropdown-toggle {
+        width: 50%;
+    }
+	.hero-heading-holder {
+		text-align: center;
+	}
+    .hero-section {
+        background-size: cover !important;
+        background-repeat: no-repeat !important;
+    }
+}
