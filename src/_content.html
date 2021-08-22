@@ -2,46 +2,34 @@
 
 <div class="customNoWpStyleFB">
     <div class="container">
-        <h2>Пакет <span class="primary-color bold">Все включено </span>- подаруйте дитині незабутнє свято</h2>
+        <h2>Святкова програма <b class="primary-color  ">2 </b> години <span class="primary-color bold">15 </span> хвилин - подаруйте дитині незабутнє свято </h2>
         <h4>до пакету входить:</h4>
         <div class="grid">
-            <div class="grid-item width-1-1 width-1-2-m width-1-4-xl">
-                <div class="card">
-                    <figure class="card-image"><img
-                            src="http://spacearena.kh.ua/wp-content/uploads/2020/08/lasertag.jpg" alt="img" /></figure>
-                    <p class="card-description"><b>Лазертаг </b>
-                        60 хвилин <span class="primary-color">(3 раунда)</span></p>
-
-                </div>
-            </div>
-            <div class="grid-item width-1-1 width-1-2-m width-1-4-xl">
-                <div class="card">
-                    <figure class="card-image"><img src="http://spacearena.kh.ua/wp-content/uploads/2020/08/7d.jpg"
-                            alt="img" /></figure>
-                    <p class="card-description"><b> 7D </b>
-                        15 хвилин <span class="primary-color">(2 ролика)</span></p>
-
-                </div>
-            </div>
-            <div class="grid-item width-1-1 width-1-2-m width-1-4-xl">
-                <div class="card">
-                    <figure class="card-image"><img
-                            src="http://spacearena.kh.ua/wp-content/uploads/2020/08/playstation.jpg" alt="img" />
-                    </figure>
-                    <p class="card-description"><b>PlayStatyon </b>
-                        45 хвилин <span class="primary-color">(На вибір або аніматор або PlayStatyon)</span></p>
-
-                </div>
-            </div>
-            <div class="grid-item width-1-1 width-1-2-m width-1-4-xl">
-                <div class="card">
-                    <figure class="card-image"><img
-                            src="http://spacearena.kh.ua/wp-content/uploads/2020/08/animation.jpg" alt="img" /></figure>
-                    <p class="card-description"><b>Анімаційна програма </b>
-                        45 хвилин <span class="primary-color">(На выбор либо аниматор либо PlayStatyon)</span></p>
-
-                </div>
-            </div>
+   
+            @@include('./html-templates/card.html',{
+                "img":"http://spacearena.kh.ua/wp-content/uploads/2020/08/lasertag.jpg",
+      "description":"Лазертаг",
+      "time":"60 минут",
+      "colordes":"(3 раунда)",
+              })
+              @@include('./html-templates/card.html',{
+                "img":"http://spacearena.kh.ua/wp-content/uploads/2020/08/7d.jpg",
+      "description":" 7D ",
+      "time":"15 минут",
+      "colordes":"(2 ролика)",
+              })
+              @@include('./html-templates/card.html',{
+                "img":"http://spacearena.kh.ua/wp-content/uploads/2020/08/playstation.jpg",
+      "description":"PlayStatyon",
+      "time":"45 минут",
+      "colordes":"(На выбор либо аниматор либо PlayStatyon)",
+              })
+              @@include('./html-templates/card.html',{
+                "img":"http://spacearena.kh.ua/wp-content/uploads/2020/08/animation.jpg",
+      "description":"Анимационная программа",
+      "time":"45 минут",
+      "colordes":"(На выбор либо аниматор либо PlayStatyon)",
+              })
         </div>
         <h3><span class="primary-color bold mr-30"> Список костюмів для анімації</span></h3>
         <ul class="list-of-programs mt-40">
