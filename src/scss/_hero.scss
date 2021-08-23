@@ -1,0 +1,130 @@
+// <section class="dr__hero">
+// <h2  class="dr__title">
+// <span class="dr__title__left">СВЯТКОВА <br>
+//     ПРОГРАМА </span>
+// <span class="dr__title__center">2</span>
+// <span class="dr__title__right">15хв. <br>години </span> 
+// </h2>
+
+// <ul class="dr__list">
+
+//     <li> <strong> Лазертаг </strong>  (1 година. Три сеанси по 15 хв. з перервами по 5 хв.)  </li>
+//     <li> <strong> Тематична анімаційна програма </strong>  (1 година)  </li>
+//     <li> <strong> 7D кіно </strong>  (два відео-ролика 15 хвилин)  </li>
+//     <li> <strong> Супровід дітей актором  </strong>  (на весь час програми) </li>
+// </ul>
+// </section>
+*{
+    border:solid rgba(255, 0, 0, 0.15) 1px;
+}
+@import '_var';
+.dr {
+    &__container {
+        box-shadow: 3px -5px 18px 10px rgba(39, 54, 79, 0.2);
+        background: rgb(0, 0, 0);
+        background: linear-gradient(90deg, rgba(12, 18, 32, 1) 0%, rgba(39, 54, 80, 1) 51%, rgba(12, 18, 32, 1) 100%);
+        max-width: $md;
+         padding: 5px;
+        @include sm{
+            padding: 40px;
+        }
+        margin: 0 auto;
+    }
+    &__title{
+        display: flex; 
+        margin-bottom: 7vw;
+        @include md{
+            margin-bottom: 44px;
+        }
+        justify-content: center;
+        align-items:  flex-end;
+        &__left{
+            font-size: 7vw;
+            padding-right: 20px;
+            @include sm {
+                font-size: 6vw;
+            }
+            @include md{
+                font-size: 60px;
+            }
+        }
+        &__center{
+            color:$p;
+            font-size: 21vw;
+            @include sm {
+                font-size: 18vw;
+            }
+            @include md{
+                font-size: 180px;
+            }
+            line-height: 0.8;
+            font-weight: 900;
+        }
+        &__right{
+            font-size: 4vw;
+            @include sm {
+                font-size: 3vw;
+            }
+            @include md{
+                font-size: 40px;
+            }
+            strong{
+                color:$p;
+                font-size: 7vw;
+                @include sm {
+                    font-size: 6vw;
+                }
+                @include md{
+                    font-size: 70px;
+                }
+            }
+        }
+    } 
+    &__list{
+        list-style-type: none;
+        counter-reset: list1; 
+        font-size: 18px;
+        @include md{
+            font-size: 20px;
+        }
+        position: relative;
+        &::before{
+            content: "";
+            position: absolute;
+            top: 10px;
+            bottom: 44px;
+            left: 20px;
+            width: 3px;
+            background-color: $p;
+            @include md{
+                bottom: 18px;
+            }
+        }
+        li{
+            position: relative;
+            margin-bottom: 12px;
+
+        }
+        li::before {
+            $fz:16px;
+            counter-increment: list1;                
+            content:   counter(list1)  ;
+            position: absolute;
+            bottom: 0;
+            top:5px;
+           
+            left: - $fz - 15px;    
+            background-color: $p;
+            border-radius: 50%;
+            height: $fz+8px;
+            width: $fz+8px;   
+              font-size: $fz;
+            display: flex;    
+            justify-content: center;
+            align-items: center;
+                       
+          }
+    }
+}
+
+ 
