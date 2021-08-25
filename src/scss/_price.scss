@@ -1,0 +1,83 @@
+
+//      <section class="dr__price"> 
+//      <div class="dr__price__left">
+//          <h2 class="dr__price__title">
+//              ТАРИФ БУДНЬОГО ДНЯ
+//          </h2>
+//          <p class="dr__price__day">
+//              Пн-Пт
+//          </p>
+//          <p class="dr__price__cost">3000 грн. <span> (6 осіб)</span> </p>
+//          <p class="dr__price__additional">+400 грн.</p>
+//          <p class="dr__price__description">за кожного гравця
+//              понад 6 осіб </p>
+//      </div>
+//      <div class="dr__price__right"> 
+//          <h2 class="dr__price__title">
+//              ТАРИФ БУДНЬОГО ДНЯ
+//          </h2>
+//          <p class="dr__price__day">
+//              Пн-Пт
+//          </p>
+//          <p class="dr__price__cost">3000 грн. <span> (6 осіб)</span> </p>
+//          <p class="dr__price__additional">+400 грн.</p>
+//          <p class="dr__price__description">за кожного гравця
+//              понад 6 осіб </p>
+
+//      </div> 
+//  </section>
+
+.dr{
+    &__price{
+        @include md {
+            display: flex;
+            border-top: white 2px solid;
+           
+        }
+        &__left{
+            @include md {
+                border-right: white 2px solid;
+                 
+                padding-right: 10px;
+                width: calc( 50% );
+            }
+        }
+        &__right{
+            @include md {
+                
+                padding-left: 10px;
+                width: calc( 50%  );
+            }
+        }
+        &__title{
+            color:$p;
+            font-weight: 900;
+            margin-bottom: 0;
+            font-size: 22px;
+            line-height: 1;
+            margin-top: 10px;
+        }
+        &__day{
+            margin: 0;
+        }
+        &__cost{
+            font-size: 33px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            margin: 0;
+            span{
+                font-size: 15px;
+            }
+        }
+        &__additional{
+            margin: 0;
+            line-height: 1;
+                font-size: 25px;
+                font-weight: 900;
+        }
+        &__description{
+            font-size: 18px;
+            line-height: 1;
+        }
+    }
+}

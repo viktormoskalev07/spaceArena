@@ -1,0 +1,41 @@
+.dr{
+
+&__table{
+    table{
+        border-spacing: 10px 0;
+        border-collapse: separate;
+        width: 100%;
+       
+    }
+	
+    i{
+    font-style: normal;
+    color:$p;
+    }
+    th{
+        color:$p;
+        text-align: center;
+        line-height: 1.1;
+    }
+    td{
+        border:solid blue 1px;
+        padding: 10px;
+       
+        background-color: #585e6b;
+        
+    }
+    &__title{
+        font-size: 33px;
+        color:$p;
+        font-weight: 900;
+        margin-bottom: 20px;
+        i{
+            display: block;
+            font-size: 15px;
+        }
+    }
+    background-color: #2e3645;
+    padding: 10px; 
+}
+
+}

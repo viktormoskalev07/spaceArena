@@ -1,19 +1,4 @@
-// <section class="dr__hero">
-// <h2  class="dr__title">
-// <span class="dr__title__left">СВЯТКОВА <br>
-//     ПРОГРАМА </span>
-// <span class="dr__title__center">2</span>
-// <span class="dr__title__right">15хв. <br>години </span> 
-// </h2>
-
-// <ul class="dr__list">
-
-//     <li> <strong> Лазертаг </strong>  (1 година. Три сеанси по 15 хв. з перервами по 5 хв.)  </li>
-//     <li> <strong> Тематична анімаційна програма </strong>  (1 година)  </li>
-//     <li> <strong> 7D кіно </strong>  (два відео-ролика 15 хвилин)  </li>
-//     <li> <strong> Супровід дітей актором  </strong>  (на весь час програми) </li>
-// </ul>
-// </section>
+ 
 *{
     border:solid rgba(255, 0, 0, 0.15) 1px;
 }
@@ -40,6 +25,7 @@
         align-items:  flex-end;
         &__left{
             font-size: 7vw;
+            line-height: 1.1;
             padding-right: 20px;
             @include sm {
                 font-size: 6vw;
@@ -54,11 +40,13 @@
             @include sm {
                 font-size: 18vw;
             }
-            @include md{
-                font-size: 180px;
-            }
+         
             line-height: 0.8;
             font-weight: 900;
+            @include md{
+                font-size: 160px;
+                line-height: 0.9;
+            }
         }
         &__right{
             font-size: 4vw;
@@ -88,24 +76,42 @@
             font-size: 20px;
         }
         position: relative;
-        &::before{
-            content: "";
-            position: absolute;
-            top: 10px;
-            bottom: 44px;
-            left: 20px;
-            width: 3px;
-            background-color: $p;
-            @include md{
-                bottom: 18px;
-            }
-        }
+
         li{
             position: relative;
             margin-bottom: 12px;
-
+                strong{
+                    color: $p;
+                    font-weight: 900;
+                    font-size: 20px;
+                    @include md{
+                        font-size: 22px;
+                    }
+                }
+                &::after{
+                    content: "";
+                    position: absolute;
+                    top: -10px; 
+                    left: -20px;
+                    width: 3px;
+                    bottom: -10px;
+                    background-color: $p;
+                    z-index: 1;
+           
+                }
+                &:first-child{
+                    &::after{
+                        top:15px;
+                    }
+                }
+                &:last-child{
+                    &::after{
+                        bottom:70%;
+                    }
+                }
         }
         li::before {
+            z-index: 2;
             $fz:16px;
             counter-increment: list1;                
             content:   counter(list1)  ;
