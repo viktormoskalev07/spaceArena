@@ -1,28 +1,20 @@
 @@include('header.html') 
 <section class="birsday-choose customNoWpStyleFB">
 	<div class="container">
-		<div class="grid"> 
-			<div class="grid-item width-1-1 width-1-2-m  ">
-				
-				<a href='kids.html' class="card">
-					<h2> 5-8 років  </h2>
-					<figure class="card-image"><img src="images/kid.jpg" alt="img" /></figure>
-					<p class="card-description"><b>Лазертаг </b>
-						60 хвилин <span class="primary-color">(3 раунда)</span></p> 
-				</a>
-				<a  href='kids.html' class="button"> bilshe </a>
-			</div> 
-			<div class="grid-item width-1-1 width-1-2-m  ">
-				<a  href='teenagers.html' class="card">
-					<h2> 9-14 років  </h2>
-					<figure class="card-image"><img src="images/teen.jpg" alt="img" /></figure>
-					<p class="card-description"><b>Лазертаг </b>
-						60 хвилин <span class="primary-color">(3 раунда)</span></p> 
-				</a>
-				<a  href='teenagers.html' class="button"> bilshe </a>
-			</div>
+		 <div class="row">
+		@@loop('repitedCard.html', [
+		{img:1 , title: 'title 1 ' , description:'desc 1'},
+		{img:'2 (тут пишем scr и вставляем в тег img)' , title: 'title 2 ' , description:'desc 2'},
+		{img:3 , title: 'title 3 ' , description:'desc 3'},
+		{img:4 , title: 'title 4 ' , description:'desc 4'},
+		{img:5 , title: 'title 5 ' , description:'desc 5'},
 		
-		</div>
+		])
+
+
+		в инклуде запрещены переносы и повторяющиеся кавычки
+
+		 </div>
 	</div> 
 </section>
 @@include('footer.html')
