@@ -1,20 +1,20 @@
-@@include('header.html') 
+@@include('header.html')
 <section class="birsday-choose customNoWpStyleFB">
 	<div class="container">
-		 <div class="row">
-		@@loop('repitedCard.html', [
-		{img:1 , title: 'title 1 ' , description:'desc 1'},
-		{img:'2 (тут пишем scr и вставляем в тег img)' , title: 'title 2 ' , description:'desc 2'},
-		{img:3 , title: 'title 3 ' , description:'desc 3'},
-		{img:4 , title: 'title 4 ' , description:'desc 4'},
-		{img:5 , title: 'title 5 ' , description:'desc 5'},
-		
-		])
+		<div class="row">
+			@@loop('repitedCard.html', [
+			{img:1 , title: 'Гра в PLAYSTATION' , description:''},
+			{img:'2 (тут пишем scr и вставляем в тег img)' , title: 'title 2 ' , description:'desc 2'},
+			{img:3 , title: 'title 3 ' , description:'desc 3'},
+			{img:4 , title: 'title 4 ' , description:'desc 4'},
+			{img:5 , title: 'title 5 ' , description:'desc 5'},
+
+			])
 
 
-		в инклуде запрещены переносы и повторяющиеся кавычки
+			в инклуде запрещены переносы и повторяющиеся кавычки
 
-		 </div>
-	</div> 
+		</div>
+	</div>
 </section>
 @@include('footer.html')
