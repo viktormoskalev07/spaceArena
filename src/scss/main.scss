@@ -14,4 +14,64 @@
 //    @import 'components/list';     
 // @import 'modules/modules.scss';
 @import 'space';
-@import 'additional'
+@import 'additional';
+
+
+.bg-gray{
+  background: #c6c6c6;
+}
+
+.flyer {
+  // .flyer_text
+  &_text {
+    color: #000;
+  }
+  // .flyer__title
+  &__title {
+      span{
+      color: #4287f5;
+    }
+  }
+  // .flyer__img
+  &__img {}
+}
+.img-flyer {
+  position: relative;
+  // .img-flyer__title
+  &__title {
+    &::before{
+      content: "";
+      display: block;
+      border-top: solid 2px #4287f5;
+      width: 100%;
+      height: 0px;
+      position: absolute;
+      top: 14px;
+      z-index: 1;
+    }
+    span{
+      background: #c6c6c6;
+      padding: 0 20px;
+      position: relative;
+      z-index: 5;
+      color: #4287f5;
+      font-weight: bold;
+    }
+  }
+  // .img-flyer__pic
+  &__pic {}
+}
+
+
+.quest-expand{
+}
+
+.quest-title{
+  color: #000;
+  text-align: left!important;
+}
+
+.quest-text{
+  color: #000;
+  text-align: left!important;
+}
