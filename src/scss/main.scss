@@ -13,7 +13,7 @@
 //    @import 'components/popup'; 
 //    @import 'components/list';     
 // @import 'modules/modules.scss';
-@import 'space';
+// @import 'space';
 @import 'additional';
 
 
@@ -62,10 +62,6 @@
   &__pic {}
 }
 
-
-.quest-expand{
-}
-
 .quest-title{
   color: #000;
   text-align: left!important;
@@ -75,3 +71,5 @@
   color: #000;
   text-align: left!important;
 }
+
+

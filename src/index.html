@@ -1,7 +1,32 @@
 @@include('header.html')
 <section class="birsday-choose customNoWpStyleFB">
 
-	//=======================================Флайер. Начала====================================
+	<!-- ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ Табы. Начало ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ -->
+
+	<button data-tab="tab1" class="tab_activator active">1</button>
+	<button data-tab="tab2" class="tab_activator">2</button>
+	<button data-tab="tab3" class="tab_activator">3</button>
+
+	<div data-tab="tab1" class="tab_child active">tab1</div>
+	<div data-tab="tab2" class="tab_child">tab2</div>
+	<div data-tab="tab3" class="tab_child">tab3</div>
+
+	<style>
+		.tab_child {
+			display: none;
+		}
+
+		.tab_activator.active {
+			background-color: green;
+		}
+
+		.tab_child.active {
+			display: block;
+		}
+	</style>
+
+
+	<!-- ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ Флайер. Начало ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ ↧ -->
 
 	<div class="bg-gray">
 		<div class="container">
@@ -22,7 +47,7 @@
 		</div>
 	</div>
 
-	//=======================================Флайер. Конец====================================
+	<!-- ↥ ↥ ↥ ↥ ↥ ↥ ↥ ↥ ↥ ↥ ↥ ↥ ↥ ↥ ↥ ↥ ↥ ↥ ↥ ↥ ↥ ↥ ↥ ↥ ↥ ↥ ↥ ↥ Флайер. Конец ↥ ↥ ↥ ↥ ↥ ↥ ↥ ↥ ↥ ↥ ↥ ↥ ↥ ↥ ↥ ↥ ↥ ↥ ↥ ↥ ↥ ↥ ↥ ↥ ↥ ↥ ↥ ↥ ↥ ↥ ↥ ↥ -->
 
 
 	@@loop('repitedCard.html', [
