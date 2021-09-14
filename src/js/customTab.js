@@ -1,4 +1,3 @@
-
 (function () {
     const tabActivators = document.querySelectorAll(".tab_activator");
     const tabChilds = document.querySelectorAll(".tab_child");
@@ -18,5 +17,3 @@
         })
     })
 }())
-
-
